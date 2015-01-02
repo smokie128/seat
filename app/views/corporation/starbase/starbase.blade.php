@@ -91,6 +91,7 @@
 
         <div class="col-md-4">
           <div class="nav-tabs-custom">
+		  <h4><b>{{ $details->itemName }}</b></h4>
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1{{ $details->itemID }}" data-toggle="tab" id="{{ $details->itemID }}">Tower Info</a></li>
               <li><a href="#tab_2{{ $details->itemID }}" data-toggle="tab">Tower Configuration</a></li>
@@ -98,7 +99,7 @@
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="tab_1{{ $details->itemID }}">
-                <h4><b>{{ $details->itemName }}</b></h4>
+                
                 @if ($details->state == 4)
                   <span class="label label-success pull-right">{{ $tower_states[$details->state] }}</span>
                 @else
