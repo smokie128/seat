@@ -262,7 +262,7 @@
                                              @if(!is_null($module_content['module_name']))
                                               <span class="text-muted">(called {{ $module_content['module_name'] }})</span>
                                              @endif
-                                            at {{ $module_content['mapName'] }}
+                                            <!-- at {{ $module_content['mapName'] }} -->
                                             @if($module_content['capacity'] > 0)
                                               is currently <b>{{ round(($module_content['used_volume'] / $module_content['capacity']) * 100, 0) }}%</b> full
                                               with {{ count($module_content['contents']) }} item(s).
