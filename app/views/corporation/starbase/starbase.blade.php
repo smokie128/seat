@@ -91,7 +91,9 @@
 
         <div class="col-md-4">
           <div class="nav-tabs-custom">
-		  <h4><b>{{ $details->itemName }}</b></h4>
+		  <div class="tab-content">
+		    <h4><b>{{ $details->itemName }}</b></h4>
+		  </div>
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1{{ $details->itemID }}" data-toggle="tab" id="{{ $details->itemID }}">Tower Info</a></li>
               <li><a href="#tab_2{{ $details->itemID }}" data-toggle="tab">Tower Configuration</a></li>
@@ -312,14 +314,17 @@
 
                                         @endif  {{-- contents count --}}
 
-                                        <hr> <!-- devide modules -->
+										@if(!next($modules) === false)
+											<hr> <!-- divide modules -->
+										@endif
 
                                       @endforeach {{-- group modules --}}
 
                                     </div>
                                   </div>
                                 </div>  <!-- ./panel -->
-                                <hr>
+                                <!-- <hr> -->
+								<br> <!-- Makes the spacing between module groups less thick -->
 
                               </div> <!-- ./panel-group -->
 
